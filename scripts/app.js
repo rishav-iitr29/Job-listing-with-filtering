@@ -1,7 +1,7 @@
 import { removeFilter, filteredTags, addFilter, clearFilterTab, clearFilterTags, renderFilterTab } from "./filter.js";
 
 function loadPage(){
-  fetch('data.json')
+  fetch('https://rishav-iitr29.github.io/Job-listing-with-filtering/data.json')
   .then(response => response.json())
   .then(data => {
     renderJobs(data);
