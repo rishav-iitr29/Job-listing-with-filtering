@@ -1,15 +1,13 @@
 import { removeFilter, filteredTags, addFilter, clearFilterTab, clearFilterTags, renderFilterTab } from "./filter.js";
 
 function loadPage(){
-  fetch('https://rishav-iitr29.github.io/Job-listing-with-filtering/data.json')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    return response.json();
-  })
-  .then(data => console.log(data))
-  .catch(error => console.error('Fetch error:', error));
+  const url = window.location.hostname.includes('github.io')
+  ? 'https://rishav-iitr29.github.io/Job-listing-with-filtering/data.json'
+  : './data.json'; // local dev
+
+fetch(url)
+  .then(response => response.json())
+  .then(data => console.log(data));
 
   function renderJobs(jobs){
     const container = document.querySelector('.js-items-container');
