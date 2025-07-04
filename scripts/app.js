@@ -1,13 +1,12 @@
 import { removeFilter, filteredTags, addFilter, clearFilterTab, clearFilterTags, renderFilterTab } from "./filter.js";
 
 function loadPage(){
-  const url = window.location.hostname.includes('github.io')
-  ? 'https://rishav-iitr29.github.io/Job-listing-with-filtering/data.json'
-  : './data.json'; // local dev
-
-fetch(url)
+  fetch('./data.json')
   .then(response => response.json())
-  .then(data => console.log(data));
+  .then(data => {
+    renderJobs(data);
+  })
+  .catch(error => console.error('Error loading JSON:', error));
 
   function renderJobs(jobs){
     const container = document.querySelector('.js-items-container');
