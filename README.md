@@ -35,8 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: https://rishav-iitr29.github.io/Job-listing-with-filtering/
 
 ## My process
 I started by building the page using HTML and then styled a static page with CSS. Then I used JS to generate HTML from data.json and add some functionality in it. Later I used media query for responsive design on smaller screens (around 768px).
