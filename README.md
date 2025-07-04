@@ -31,6 +31,7 @@ Users should be able to:
 ### Screenshot
 
 ![](./screenshot/desktop-preview.png)
+![](./screenshot/768-preview.png)
 
 ### Links
 
