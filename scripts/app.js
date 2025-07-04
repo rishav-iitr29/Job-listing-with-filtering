@@ -2,11 +2,14 @@ import { removeFilter, filteredTags, addFilter, clearFilterTab, clearFilterTags,
 
 function loadPage(){
   fetch('https://rishav-iitr29.github.io/Job-listing-with-filtering/data.json')
-  .then(response => response.json())
-  .then(data => {
-    renderJobs(data);
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
   })
-  .catch(error => console.error('Error loading JSON:', error));
+  .then(data => console.log(data))
+  .catch(error => console.error('Fetch error:', error));
 
   function renderJobs(jobs){
     const container = document.querySelector('.js-items-container');
