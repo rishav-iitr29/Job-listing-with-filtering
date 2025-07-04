@@ -1,0 +1,10 @@
+.header{
+  background-color: hsl(180, 29%, 50%);
+}
+.banner{
+  height: 156px;
+}
+
+@media(max-width: 650px){
+  
+}
